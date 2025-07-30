@@ -1,18 +1,17 @@
 // App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "./Home";
-import Register from "./Register";
-import ClientProfile from "./ClientProfile";
-import TalentProfile from "./TalentProfile";
-import ClientDashboard from "./ClientDashboard";
-import TalentDashboard from "./TalentDashboard";
-import PostJobs from "./PostJobs";
-import Browse from "./Browse";
-import Chat from "./Chat";
-import JobDetails from "./JobDetails";
-import Notifications from "./Notifications";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import TalentProfile from "./pages/TalentProfile";
+import ClientProfile from "./pages/ClientProfile";
+import TalentDashboard from "./pages/TalentDashboard";
+import ClientDashboard from "./pages/ClientDashboard";
+import PostJobs from "./pages/PostJobs";
+import JobDetails from "./pages/JobDetails";
+import Chat from "./pages/Chat";
+import Notifications from "./pages/Notifications";
+import Browse from "./pages/Browse";
 
 function App() {
   return (
@@ -20,15 +19,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/client-profile" element={<ClientProfile />} />
         <Route path="/talent-profile" element={<TalentProfile />} />
-        <Route path="/client-dashboard" element={<ClientDashboard />} />
+        <Route path="/client-profile" element={<ClientProfile />} />
         <Route path="/talent-dashboard" element={<TalentDashboard />} />
+        <Route path="/client-dashboard" element={<ClientDashboard />} />
         <Route path="/post-job" element={<PostJobs />} />
-        <Route path="/browse" element={<Browse />} />
-        <Route path="/chat" element={<Chat />} />
         <Route path="/job/:id" element={<JobDetails />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/browse" element={<Browse />} />
       </Routes>
     </Router>
   );
